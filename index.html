@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hustle Libary</title>
+  <link rel="stylesheet" href="./style/index.css" />
+  <script src="https://kit.fontawesome.com/92b21ed5b0.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- Navigaton Menu With Search Bar -->
+    <nav class="navBar">
+      <h1 class="heading toUpper letterSpace">
+        <span> Hustle Libary</span>
+        <span><i class="fas fa-book"></i></span>
+      </h1>
+    </nav>
+    <!-- Showing Error -->
+    <!-- <div class="message">
+        <span>
+          <i class="fas fa-exclamation-circle"></i>
+          Sorry You cannot add this book !!
+        </span>
+        <span>
+          <i class="fas fa-times" id="closeBtn"></i>
+        </span>
+
+        <span>
+          <i class="fas fa-clipboard-check"></i>
+          Book Succesfully Added !!
+        </span>
+        <span>
+          <i class="fas fa-times" id="closeBtn"></i>
+        </span>
+      </div> -->
+    <!-- Entering book details -->
+    <section class="mainContent">
+      <h1 class="toUpper subHeading letterSpace">Add Books</h1>
+      <div class="bookEntry">
+        <form id="libaryForm">
+          <!-- Entering Book name -->
+          <div class="contentInput">
+            <label for="bookName">Book Name : </label>
+            <input type="text" id="bookName" placeholder="Book Name" />
+          </div>
+          <!-- Entering book author name -->
+          <div class="contentInput">
+            <label for="authorName">Author Name:</label>
+            <input type="text" id="authorName" placeholder="Author Name" />
+          </div>
+          <!-- Entering book type via radio buttons -->
+          <div class="contentInput">
+            <span>Type</span>
+            <div class="radioOption">
+              <!--Fiction -->
+              <input type="radio" name="bookType" id="fiction" value="fiction" />
+              <label for="fiction">Fiction</label>
+            </div>
+
+            <div class="radioOption">
+              <!--Cooking -->
+              <input type="radio" name="bookType" id="cooking" value="cooking" />
+              <label for="cooking">Cooking</label>
+            </div>
+
+            <div class="radioOption">
+              <!--Coding -->
+              <input type="radio" name="bookType" id="coding" value="coding" />
+              <label for="coding">Coding</label>
+            </div>
+          </div>
+          <div class="contentInput">
+            <button id="addBook">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Displaying book list -->
+
+    <section class="bookList">
+      <nav class="searchBar">
+        <h1 class="toUpper subHeading letterSpace">Your Books</h1>
+        <div class="searchBox">
+          <span id="searchOptions">
+            <span>Search by</span>
+            <i class="fas fa-angle-down" id="icon"></i>
+          </span>
+
+          <ul class="subMenu dropDown">
+            <li onclick="searchChoice('Book Name')">Book Name</li>
+            <li onclick="searchChoice('Author Name')">Author Name</li>
+            <li class="hoverme">
+              Book Type
+              <div class="subMenu2 dropDown">
+                <ul>
+                  <li onclick="searchChoice('Fiction')">Fiction</li>
+                  <li onclick="searchChoice('Cooking')">Cooking</li>
+                  <li onclick="searchChoice('Coding')">Coding</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <input type="text" placeholder="Search" id="searchTxt" />
+        </div>
+      </nav>
+      <div class="tableBox">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Type</th>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <!-- Adding The Js -->
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
