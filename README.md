@@ -3,5 +3,5 @@
   Books can be filtered 
   Vanilla javascript is used
   
-##Deployed
+## Deployed
   Visit https://sumanshu225.github.io/libary/
